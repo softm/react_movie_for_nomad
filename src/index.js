@@ -5,35 +5,11 @@ import App from './App';
 import Test from './Test';
 import reportWebVitals from './reportWebVitals';
 
-function Test2(props) {
-  console.log(props);
-  return 
-  <div>
-   <h1>Test2</h1>
-    <pre>
-    props.param : {props.param}<br/>
-    props.something : {props.something}<br/>
-    props.papapa : {props.papapa[0]}<br/>
-    </pre>
-  </div>;
-}
-
-function Test3({param, something, papapa}) {
-  console.log(param, something, papapa);
-  return <h1><pre>
-    param : {param}<br/>
-    something : {something}<br/>
-    papapa : {papapa[0]}<br/>
-    </pre></h1>;
-}
 
 ReactDOM.render(
   <React.StrictMode>
     <div>
       <App />
-      <Test />
-      <Test2 param="test" something={true} papapa={["he"]}/>
-      <Test3 param="test" something={true} papapa={["he"]}/>
     </div>
   </React.StrictMode>,
   document.getElementById('root')
