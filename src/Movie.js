@@ -3,7 +3,7 @@ import axios from 'axios';
 import PropType from "prop-types";
 import "./Movie.css";
 
-function Movie({id, year, title, summary, poster}){
+function Movie({id, year, title, summary, poster,genres}){
   return <div class="movie">
     <img src={poster} alt={title} title={title}/>
     <div class="movie__data">
@@ -19,7 +19,8 @@ Movie.PropType = {
   year:PropType.number.isRequired,
   title:PropType.string.isRequired,
   summary:PropType.string.isRequired,
-  poster:PropType.string.isRequired
+  poster:PropType.string.isRequired,
+  genres:PropType.arrayOf(PropType.string).isRequired
 }
 
 export default Movie;
